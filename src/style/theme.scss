@@ -1,0 +1,31 @@
+$themes: (
+  light: (
+    c-background: #ffffff,
+    c-text: #000,
+    c-primary: #006064,
+    c-primary-light: #428e92,
+    c-primary-dark: #00363a,
+    c-text-contrast: #ffffff
+  ),
+  dark: (
+    c-background: #2f2f2f,
+    c-text: #f9f9fb,
+    c-primary: #212121,
+    c-primary-light: #4b4b4b,
+    c-primary-dark: #0f0f0f,
+    c-text-contrast: #ffffff
+  )
+);
+
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: map-get(map-get($themes, $theme-name), $color);
+    }
+  }
+}
+
+body {
+  @include theme-aware('background', 'c-background');
+  transition: 0.5s ease-in-out;
+}

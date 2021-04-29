@@ -1,0 +1,38 @@
+@import 'theme';
+
+$radius: 0;
+
+#nav {
+  @include theme-aware('background', 'c-primary');
+
+  display: flex;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  @include theme-aware('border-color', 'c-primary-dark');
+
+  margin: 10px;
+
+  border-radius: $radius;
+}
+.nav-item {
+  @include theme-aware('color', 'c-text-contrast');
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-item-active > div {
+  @include theme-aware('color', 'c-primary-light');
+}
+
+.nav-item:hover {
+  @include theme-aware('background', 'c-primary-dark');
+  cursor: pointer;
+}
+.theme-toggle {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
