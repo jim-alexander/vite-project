@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { NavLink } from 'react-router-dom'
 
-import { FiSun, FiMoon } from 'react-icons/fi'
+import { FiSun, FiMoon, FiUser } from 'react-icons/fi'
 
 import '../style/nav.scss'
 
@@ -23,12 +23,22 @@ const Nav = () => {
 
   return (
     <div id='nav'>
+      <h3 id='nav-logo'>Logo</h3>
+
+      <div className=' nav-divider' />
+
       <NavItem path='' text='Dashboard' />
       <NavItem path='calendar' text='Calendar' />
       <NavItem path='clients' text='Clients' />
 
-      <div className='nav-item theme-toggle' onClick={() => changeTheme(theme === 'light' ? 'dark' : 'light')}>
+      <div className='nav-item-right nav-divider' />
+
+      <div className='nav-item nav-icon' onClick={() => changeTheme(theme === 'light' ? 'dark' : 'light')}>
         {theme === 'light' ? <FiMoon /> : <FiSun />}
+      </div>
+
+      <div className='nav-item nav-icon'>
+        <FiUser />
       </div>
     </div>
   )

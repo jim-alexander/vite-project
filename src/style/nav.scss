@@ -7,10 +7,8 @@ $radius: 0;
 
   display: flex;
   border-bottom: 4px solid;
-  border-right: 4px solid;
-  @include theme-aware('border-color', 'c-primary-dark');
 
-  margin: 10px;
+  @include theme-aware('border-color', 'c-primary-dark');
 
   border-radius: $radius;
 }
@@ -29,10 +27,21 @@ $radius: 0;
   @include theme-aware('background', 'c-primary-dark');
   cursor: pointer;
 }
-.theme-toggle {
+.nav-divider {
+  border-right: 2px solid;
+  @include theme-aware('border-color', 'c-primary-dark');
+  margin: 10px 0 7px 0;
+}
+.nav-item-right {
   margin-left: auto;
+}
+.nav-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
+}
+#nav-logo {
+  margin: auto 40px;
+  @include theme-aware('color', 'c-text-contrast');
 }
