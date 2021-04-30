@@ -1,21 +1,22 @@
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import Nav from './layout/Nav'
+import { ContextProvider } from './layout/context'
 
-import routes from './routes'
+import PrivateRoute from './layout/PrivateRoute'
+import routes from './layout/routes'
 
 import './style/theme.scss'
 import './style/shared.scss'
 
-const App = () => (
-  <Router>
-    <Nav />
-    <Switch>
-      {routes.map(({ component, url, exact }) => (
-        <Route key={url} component={component} path={url} exact={exact} />
-      ))}
-    </Switch>
-  </Router>
+export default () => (
+  <ContextProvider>
+    <Router>
+      <Switch>
+        {routes.map(({ auth, ...rest }, i) => {
+          if (auth) return <PrivateRoute key={i} {...rest} />
+          else return <Route key={i} {...rest} />
+        })}
+      </Switch>
+    </Router>
+  </ContextProvider>
 )
-
-export default App
