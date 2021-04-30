@@ -11,7 +11,9 @@ export default ({ nav, ...props }) => {
   const Page = () => (
     <>
       {nav && <Nav />}
-      <Route {...props} />
+      <div className='content'>
+        <Route {...props} />
+      </div>
     </>
   )
 

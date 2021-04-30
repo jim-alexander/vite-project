@@ -1,9 +1,12 @@
 @import 'theme';
 
 .content {
+  margin: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @include theme-aware('color', 'c-text');
 }

@@ -4,34 +4,35 @@ const page = (name) => loadable(() => import(`../pages/${name}.jsx`))
 
 const routes = [
   {
-    label: 'Dashboard',
     component: page('Dashboard'),
     exact: true,
     path: '/',
 
+    label: 'Dashboard',
     auth: true,
     nav: true
   },
   {
-    label: 'Calendar',
     component: page('Calendar'),
     path: '/calendar',
 
+    label: 'Calendar',
     auth: true,
     nav: true
   },
   {
-    label: 'Clients',
     component: page('Clients'),
     path: '/clients',
 
+    label: 'Clients',
     auth: true,
     nav: true
   },
   {
-    label: 'Login',
     component: page('Login'),
-    path: '/login'
+    path: '/login',
+
+    label: 'Login'
   }
 ]
 

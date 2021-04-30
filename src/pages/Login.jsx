@@ -7,5 +7,9 @@ export default () => {
   const { user, setUser } = useContext(GlobalContext)
 
   if (user) return <Redirect to='/' />
-  return <h1 onClick={() => setUser(true)}>Login</h1>
+  return (
+    <div className='content'>
+      <h1 onClick={() => setUser(true)}>Login</h1>
+    </div>
+  )
 }

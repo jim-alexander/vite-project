@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { GlobalContext } from '../meta/context'
 import routes from '../meta/routes'
 
@@ -17,6 +17,11 @@ const Nav = () => {
   const { user, setUser } = useContext(GlobalContext)
   const [theme, setTheme] = useState('light')
 
+  useEffect(() => {
+    let saved = document.documentElement.className.replace('theme-', '')
+    saved && setTheme(saved)
+  }, [])
+
   const changeTheme = (e) => {
     setTheme(e)
     document.documentElement.className = ''
@@ -25,9 +30,9 @@ const Nav = () => {
 
   return (
     <div id='nav'>
-      <h3 id='nav-logo'>Logo</h3>
+      <h3 id='nav-logo'>LOGO</h3>
 
-      <div className=' nav-divider' />
+      <div className='nav-divider' />
 
       {routes.map(({ nav, ...props }, i) => nav && <NavItem key={i} {...props} />)}
 

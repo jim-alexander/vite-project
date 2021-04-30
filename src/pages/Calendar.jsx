@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className='content'>
+    <div>
       <h1>Calendar</h1>
     </div>
   )
