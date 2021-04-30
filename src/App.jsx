@@ -1,9 +1,8 @@
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import { ContextProvider } from './layout/context'
-
-import PrivateRoute from './layout/PrivateRoute'
-import routes from './layout/routes'
+import { ContextProvider } from './meta/context'
+import PrivateRoute from './meta/PrivateRoute'
+import routes from './meta/routes'
 
 import './style/theme.scss'
 import './style/shared.scss'

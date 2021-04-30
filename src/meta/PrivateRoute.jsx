@@ -3,7 +3,7 @@ import { GlobalContext } from './context'
 
 import { Route, Redirect } from 'react-router-dom'
 
-import Nav from './Nav'
+import Nav from '../layout/Nav'
 
 export default ({ nav, ...props }) => {
   const { user } = useContext(GlobalContext)

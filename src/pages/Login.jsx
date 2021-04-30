@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { GlobalContext } from '../layout/context'
+import { GlobalContext } from '../meta/context'
 
 import { Redirect } from 'react-router-dom'
 

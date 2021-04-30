@@ -1,11 +1,9 @@
 import { useState, useContext } from 'react'
-import { GlobalContext } from './context'
+import { GlobalContext } from '../meta/context'
+import routes from '../meta/routes'
 
 import { NavLink } from 'react-router-dom'
-
 import { FiSun, FiMoon, FiUserMinus } from 'react-icons/fi'
-
-import routes from './routes'
 
 import '../style/nav.scss'
 
