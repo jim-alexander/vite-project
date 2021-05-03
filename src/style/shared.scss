@@ -3,10 +3,16 @@
 .content {
   margin: 10px;
 
+  @include theme-aware('color', 'c-text');
+}
+.flex-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @include theme-aware('color', 'c-text');
+}
+.gradient-bg {
+  @include theme-aware('background-image', 'g-background');
+  object-fit: cover;
+  @include theme-aware('color', 'c-text-contrast');
 }

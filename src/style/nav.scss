@@ -3,34 +3,29 @@
 $radius: 0;
 
 #nav {
-  @include theme-aware('background', 'c-primary');
-
   display: flex;
-  border-bottom: 4px solid;
-
-  @include theme-aware('border-color', 'c-primary-dark');
 
   border-radius: $radius;
   user-select: none;
+  position: relative;
 }
+
 .nav-item {
   @include theme-aware('color', 'c-text-contrast');
-  padding: 15px 20px;
+  padding: 20px 20px;
   font-size: 14px;
   font-weight: 600;
 }
 
 .nav-item-active > div {
-  @include theme-aware('color', 'c-primary-light');
+  color: #0000001c;
 }
 
 .nav-item:hover {
-  @include theme-aware('background', 'c-primary-dark');
+  background-color: #0000001c;
   cursor: pointer;
 }
 .nav-divider {
-  border-right: 2px solid;
-  @include theme-aware('border-color', 'c-primary-dark');
   margin: 10px 0 7px 0;
 }
 .nav-item-right {

@@ -1,9 +1,10 @@
 import { useState, useContext, useEffect } from 'react'
 import { GlobalContext } from '../meta/context'
-import routes from '../meta/routes'
 
 import { NavLink } from 'react-router-dom'
 import { FiSun, FiMoon, FiUserMinus } from 'react-icons/fi'
+
+import routes from '../meta/routes'
 
 import '../style/nav.scss'
 
@@ -14,7 +15,7 @@ const NavItem = ({ path, label }) => (
 )
 
 const Nav = () => {
-  const { user, setUser } = useContext(GlobalContext)
+  const { setUser } = useContext(GlobalContext)
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const Nav = () => {
   }
 
   return (
-    <div id='nav'>
+    <div id='nav' className='gradient-bg'>
       <h3 id='nav-logo'>LOGO</h3>
 
       <div className='nav-divider' />

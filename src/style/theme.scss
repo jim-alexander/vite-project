@@ -1,5 +1,6 @@
 $themes: (
   light: (
+    g-background: url(../assets/gradient.png),
     c-background: #ffffff,
     c-text: #000,
     c-primary: #006064,
@@ -8,6 +9,7 @@ $themes: (
     c-text-contrast: #ffffff
   ),
   dark: (
+    g-background: url(../assets/gradient-bw.png),
     c-background: #2f2f2f,
     c-text: #f9f9fb,
     c-primary: #212121,
