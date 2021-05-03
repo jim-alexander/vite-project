@@ -13,6 +13,6 @@
 }
 .gradient-bg {
   @include theme-aware('background-image', 'g-background');
-  object-fit: cover;
   @include theme-aware('color', 'c-text-contrast');
+  object-fit: cover;
 }
