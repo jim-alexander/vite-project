@@ -4,8 +4,8 @@ export const GlobalContext = createContext()
 
 const { Provider } = GlobalContext
 
-export const ContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null) //default = null
+export const GlobalContextProvider = ({ children }) => {
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     setUser(true)

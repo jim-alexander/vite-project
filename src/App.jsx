@@ -1,6 +1,6 @@
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
-import { ContextProvider } from './meta/context'
+import { GlobalContextProvider } from './meta/context'
 import PrivateRoute from './meta/PrivateRoute'
 import routes from './meta/routes'
 
@@ -8,7 +8,7 @@ import './style/global.css'
 import './style/shared.scss'
 
 export default () => (
-  <ContextProvider>
+  <GlobalContextProvider>
     <Router>
       <Switch>
         {routes.map(({ auth, ...rest }, i) => {
@@ -17,5 +17,5 @@ export default () => (
         })}
       </Switch>
     </Router>
-  </ContextProvider>
+  </GlobalContextProvider>
 )

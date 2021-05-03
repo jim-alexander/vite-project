@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 import Nav from '../layout/Nav'
 
-export default ({ nav, ...props }) => {
+export default ({ nav, label, ...props }) => {
   const { user } = useContext(GlobalContext)
 
   const Page = () => (
